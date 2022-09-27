@@ -1,0 +1,50 @@
+{% extends 'carga.html'%}
+
+{% block titulo %}
+<title>Home</title>
+{% endblock %}
+
+
+{% block redes %}
+    <h5 class="u-text u-text-1">SIGUENOS</h5>
+    <p class="u-text u-text-2">Estetica canina "RHEMA" Recuerda que si no puedes o no quieres salir nosotros vamos por tu peludo.</p>
+{% endblock %}
+
+{% block nav %}
+<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+    <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+      <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+      <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+    </a>
+  </div>
+  <div class="u-nav-container">
+    <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:servapp'%}" style="padding: 10px 20px;">Servicios</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Datos de Cliente.html" style="padding: 10px 20px;">Datos de cliente</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Productos.html" style="padding: 10px 20px;">Productos</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Citas.html" style="padding: 10px 20px;">Citas</a>
+</li></ul>
+  </div>
+  <div class="u-nav-container-collapse">
+    <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+      <div class="u-inner-container-layout u-sidenav-overflow">
+        <div class="u-menu-close"></div>
+        <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:servapp'%}">Servicios</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Datos de Cliente.html">Datos de Cliente</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Productos.html">Productos</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Citas.html">Citas</a>
+</li></ul>
+      </div>
+    </div>
+    <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+  </div>
+{% endblock %}
+
+
+
+{% block contenido %}
+    <h1 class="u-custom-font u-text u-text-palette-3-base u-title u-text-3">Estetica Canina RHEMA</h1>
+    <p class="u-text u-text-palette-5-dark-2 u-text-4">Somos una estética especialmente para perros, tratamos de darle un buen servicio al cliente y sobre todo a la mascota y brindarle el mejor precio.</p>
+    <a href="iniciosesion.html" class="u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-palette-3-base u-radius-0 u-text-grey-5 u-btn-2">Ver mas</a>
+{% endblock %}
+
