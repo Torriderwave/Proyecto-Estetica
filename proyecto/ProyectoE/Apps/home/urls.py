@@ -16,10 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from Apps.home import views
-from .views import HomeView,ServicioView
+from .views import HomeView,ServicioView,LoginView,ClienteView,CitasView,ProductoView,CrearClienteView,CrearMascotaView,CrearCitasView,CrearProductoView
 
 app_name='home'
 urlpatterns = [
      path('', HomeView.as_view(), name='homeapp'),
-     path('servicios/', ServicioView.as_view(), name='servapp')
+     path('servicios/', ServicioView.as_view(), name='servapp'),
+     path('login/', LoginView.as_view(), name='loginapp'),
+     path('Cliente/', CrearClienteView.as_view(), name='clienteapp'),
+     path('Citas/', CrearCitasView.as_view(), name='citasapp'),
+     path('Agregar mascota/', CrearMascotaView.as_view(), name='mascotaapp'),
+     path('Productos/', CrearProductoView.as_view(), name='prodapp'),
+
 ]

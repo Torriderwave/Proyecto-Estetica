@@ -21,9 +21,10 @@
   </div>
   <div class="u-nav-container">
     <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:servapp'%}" style="padding: 10px 20px;">Servicios</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Datos de Cliente.html" style="padding: 10px 20px;">Datos de cliente</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Productos.html" style="padding: 10px 20px;">Productos</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Citas.html" style="padding: 10px 20px;">Citas</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:clienteapp'%}" style="padding: 10px 20px;">Datos de cliente</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:prodapp'%}" style="padding: 10px 20px;">Productos</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:citasapp'%}" style="padding: 10px 20px;">Citas</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home:loginapp'%}" style="padding: 10px 20px;">Login</a>
 </li></ul>
   </div>
   <div class="u-nav-container-collapse">
@@ -31,9 +32,10 @@
       <div class="u-inner-container-layout u-sidenav-overflow">
         <div class="u-menu-close"></div>
         <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:servapp'%}">Servicios</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Datos de Cliente.html">Datos de Cliente</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Productos.html">Productos</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Citas.html">Citas</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:clienteapp'%}">Datos de Cliente</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:prodapp'%}">Productos</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:citasapp'%}">Citas</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:loginapp'%}">Login</a>
 </li></ul>
       </div>
     </div>
@@ -82,6 +84,7 @@
 
 
 {% block redes2 %}
+
 <div class="u-container-layout u-container-layout-2">
     <h2 class="u-text u-text-default u-text-1">SUSCRIBETE</h2>
     <h6 class="u-text u-text-2"> a los boletines y actualización de contenido</h6>

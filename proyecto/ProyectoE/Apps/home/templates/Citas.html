@@ -1,13 +1,8 @@
 {% extends 'carga.html'%}
 
+
 {% block titulo %}
-<title>Home</title>
-{% endblock %}
-
-
-{% block redes %}
-    <h5 class="u-text u-text-1">SIGUENOS</h5>
-    <p class="u-text u-text-2">Estetica canina "RHEMA" Recuerda que si no puedes o no quieres salir nosotros vamos por tu peludo.</p>
+<title>Citas</title>
 {% endblock %}
 
 {% block nav %}
@@ -31,10 +26,10 @@
       <div class="u-inner-container-layout u-sidenav-overflow">
         <div class="u-menu-close"></div>
         <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:servapp'%}">Servicios</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{%url 'home:clienteapp'%}">Datos de Cliente</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:clienteapp'%}">Datos de Cliente</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:prodapp'%}">Productos</a>
           </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:citasapp'%}">Citas</a>
-          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:loginapp' %}">Login</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home:loginapp'%}">Login</a>
 </li></ul>
       </div>
     </div>
@@ -42,11 +37,30 @@
   </div>
 {% endblock %}
 
+{% block Cita %} 
+<h2 style="color:#000000">Datos de Cita</h2>
+<form method="post">
+    {% csrf_token %}
+    <h4>Fecha de Cita</h4> {{form.Fecha}}
+    <h4>Hora de Cita</h4> {{form.Hora}}
+    <h4>Nombre de Cliente</h4> {{form.Cliente}}
+    <h4>Nombre de Mascota</h4> {{form.Mascota}}
+    <input class="u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-palette-3-base u-text-grey-5 u-btn-3" type="submit" name="guardar">
+  </form>
 
+{% endblock %} 
 
-{% block contenido %}
-    <h1 class="u-custom-font u-text u-text-palette-3-base u-title u-text-3">Estetica Canina RHEMA</h1>
-    <p class="u-text u-text-palette-5-dark-2 u-text-4">Somos una estética especialmente para perros, tratamos de darle un buen servicio al cliente y sobre todo a la mascota y brindarle el mejor precio.</p>
-    <a href="iniciosesion.html" class="u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-palette-3-base u-radius-0 u-text-grey-5 u-btn-2">Ver mas</a>
+{% block Servicio %} 
+          <h2 style="color:#000000">Datos de Servicio</h2>
+          <label style="color:#000000"><input type="checkbox" id="cbox1" value="first_checkbox"> Corte de Pelo</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox2" value="first_checkbox"> Corte de uñas</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox3" value="first_checkbox"> Baño, control de pulgas y garrapatas</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox4" value="first_checkbox"> Limpieza de oidos</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox5" value="first_checkbox"> Glandulas anales</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox6" value="first_checkbox"> Secado de Pelo</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox7" value="first_checkbox"> Aplicacion de colonia</label></br>
+          <label style="color:#000000"><input type="checkbox" id="cbox8" value="first_checkbox"> Tratamiento de animales</label></br>
+          <input class="controls" type="text" name="apellidos" placeholder="Nota imprtante">
+          <input class="u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-palette-3-base u-radius-0 u-text-grey-5 u-btn-2" type="submit" value="Guardar">
+      </section>
 {% endblock %}
-
